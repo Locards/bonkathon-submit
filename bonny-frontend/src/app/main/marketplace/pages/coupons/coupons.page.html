@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+ <main *ngIf="profile">
+  <section class="header" style="position: relative;">
+    <ion-icon class="back-button" (click)="navigateBack()" fill="outline" slot="icon-only" name="chevron-back"></ion-icon>
+    <span>All Coupons</span>
+  </section>
+
+  <section class="filter">
+    <div class="filter-container">
+      <ion-chip (click)="selectFilter('all')" [color]="getFilterColor('all')">All</ion-chip>
+      <ion-chip (click)="selectFilter('active')" [color]="getFilterColor('active')">Activated</ion-chip>
+      <ion-chip (click)="selectFilter('notActive')" [color]="getFilterColor('notActive')">Available</ion-chip>
+    </div>
+  </section>
+
+  <section class="coupons">
+    <div class="coupons-wrapper">
+      <app-coupon-card
+      *ngFor="let coupon of getVisibleCoupons()"
+      [coupon]="coupon"
+      [canActivate]="true"
+      [active]="coupon.status === 'active'"
+      (activate)="activateCoupon(coupon, $event)"
+      (scan)="scanCoupon(coupon, $event)"
+      ></app-coupon-card>
+    </div>
+  </section>
+ </main>
+
+
+ <ion-modal [isOpen]="showSuccess" [initialBreakpoint]="0.8" [breakpoints]="[0, 0.8]" [handle]="false" class="modal-success">
+  <ng-template>
+    <div class="modal-success-wrapper">
+      <ng-lottie [options]="successOptions"></ng-lottie>
+      <span>Coupon has been redeemed!</span>
+      <br>
+      <span>You earned <b>{{earnedPoints.toFixed(2)}}</b> Bonny Tokens</span>
+      <ion-button class="success-button" (click)="hideSuccess()" >Acknowledge</ion-button>
+    </div>
+  </ng-template>
+</ion-modal> 
+
+</ion-content>

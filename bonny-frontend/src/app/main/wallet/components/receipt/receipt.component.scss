@@ -1,0 +1,30 @@
+main {
+    height: 100%;
+    padding: 16px;
+    overflow-y: scroll;
+    padding-top: 64px;
+}
+
+img {
+    border-radius: 8px;
+    margin: 16px auto;
+    height: auto;
+    width: 100%;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ion-spinner {
+        height: 64px;
+        width: 64px;
+    }
+}
+
+.metadata {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}

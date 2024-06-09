@@ -1,0 +1,49 @@
+main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 10% 10% auto;
+    padding: 16px;
+    background-color: whitesmoke;
+    overflow-y: scroll;
+}
+
+.header {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .back-button {
+        position: absolute;
+        left: 0;
+        transform: translateX(50%);
+    }
+
+    span {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+}
+
+.coupon-wrapper {
+    position: relative;
+}
+
+.filter {
+    .filter-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 8px;
+
+        ion-chip {
+            flex-grow: 1;
+            width: 33%;
+            justify-content: center;
+        }
+    }
+}
+

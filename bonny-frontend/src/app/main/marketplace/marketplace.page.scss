@@ -1,0 +1,129 @@
+main {
+    height: 100%;
+    width: 100%;
+    animation: 0.2s fade-in ease-in-out forwards;
+    background-color: whitesmoke;
+    overflow-y: scroll;
+
+    @keyframes fade-in {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+}
+
+ion-segment {
+    position: sticky;
+    top: 0;
+    background-color: whitesmoke;
+    z-index: 5;
+}
+
+.content {
+    background: whitesmoke;
+}
+
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 16px;
+
+    .text-container {
+
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+
+        .points {
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            img {
+                height: 32px;
+                width: 32px;
+            }
+        }
+    }
+
+}
+
+.earn {
+    height: 100%;
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+
+    .earn-container {
+
+        width: 100vw;
+        max-width: 453.2px;
+        ion-icon {
+            height: 24px;
+            width: 24px
+        }
+
+        .header {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 14px;
+            border-bottom: 2px solid;
+
+            h1 {
+                margin: 0 !important;
+                font-size: 24px !important;
+            }
+
+        }
+
+        .card-container {
+            height: 100%;
+
+        }
+
+        .card-wrapper {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        swiper {
+            padding-right: 64px;
+        }
+
+    }
+
+}
+
+.spend {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.no-quests {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        transform: scaleX(-1);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 80px;
+        width: 80px;
+    }
+}

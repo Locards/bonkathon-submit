@@ -1,0 +1,51 @@
+main {
+    height: 100%;
+    padding: 10%;
+    background-color: whitesmoke;
+
+    animation: 0.5s fade-in ease-in-out forwards;
+
+    @keyframes fade-in {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+    
+}
+
+.header {
+    font-weight: bolder;
+    color: var(--ion-color-primary);
+}
+
+.inputs {
+
+    ion-input {
+        background: whitesmoke;
+        margin-top: 8px;
+
+    }
+    
+    ion-button {
+        width: 100%;
+        text-transform: none;
+    }
+}
+
+.other-logins {
+    ion-button {
+        width: 100%;
+        text-transform: none;
+        
+    }
+}
+
+.sign-up {
+    text-align: center;
+    cursor: pointer;
+    margin-top: 8px;
+
+    a {
+        color: var(--ion-color-danger);
+    }
+
+}

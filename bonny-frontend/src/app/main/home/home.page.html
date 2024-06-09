@@ -1,0 +1,99 @@
+
+<ion-content [fullscreen]="true">
+
+  <ion-refresher slot="fixed" (ionRefresh)="loadHome($event)">
+    <ion-refresher-content refreshingSpinner="circles"></ion-refresher-content>
+  </ion-refresher>
+
+  <main *ngIf="home else loadingScreen">
+
+    <section class="header">
+
+      <div class="profile-container"  (click)="showProfile()">
+        <div class="text-container">
+          <span>Welcome back!</span>
+          <span class="name">{{home.profile.email}}</span>
+        </div>
+        <ion-avatar>
+          <img [src]="getAvatar()">
+        </ion-avatar>
+      </div>
+
+
+    </section>
+
+    <section class="balance">
+
+      <!--<div id="balance-chart" class="charts-css pie">
+        <table>
+          <tbody>
+            <tr>
+              <td id="available" style="--start: 0.0; --end: 1.0;"></td>
+            </tr>
+            <tr>
+              <td id="pending" style="--start: 0.0; --end: 0.2;"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="chart-desc">
+          <span>
+            <ion-note>Balance</ion-note>
+            {{home.profile.tokens.toFixed(2)}}
+            <img src="assets/logo.png">
+          </span>
+        </div>
+      </div>
+      
+      <div class="avail-container">
+        <div>
+          <span>1121B°</span>
+          <span>Available</span>
+        </div>
+        <div>
+          <span>423B°</span>
+          <span>Pending</span>
+        </div>
+      </div>-->
+      <div class="balance-container" (click)="showWallet()">
+        <span>Balance</span>
+        <h1>{{home.profile.tokens.toFixed(2)}}<img src="assets/logo.png"></h1>
+      </div>
+      
+    </section>
+
+    <div class="history">
+      <ion-button class="history" fill="outline" color="primary" (click)="showHistory()" style="background-color: white; border-radius: 64px;">
+        View History
+      </ion-button>
+    </div>
+
+    <swiper class="deal-swiper"
+    [pagination]="true"
+    [autoplay]="true"
+    [loop]="true"
+    >
+      <ng-template *ngFor="let deal of deals" swiperSlide class="swiper-slide-home">
+        <img [src]="deal.imageUrl" (click)="openDeal(deal)">
+      </ng-template>
+    </swiper>
+
+    <div class="home-text">
+
+      <h1>Welcome to Bonny!</h1>
+      <ion-text>
+        Scan or upload receipts with the black "+" button.
+        Earn points and convert them to tokens, which can be cashed out when released.
+        Early users are rewarded more. Our mission: create a fair data economy where you profit from your data.
+      </ion-text>
+    </div>
+
+  </main>
+
+
+  <ng-template #loadingScreen>
+    <main>
+    </main>
+  </ng-template>
+
+</ion-content>

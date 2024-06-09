@@ -1,0 +1,36 @@
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+    padding-top: 64px !important;
+    position: relative;
+
+
+    animation: 0.2s fade-in ease-in-out forwards;
+
+    @keyframes fade-in {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+    h3 {
+        border-bottom: 2px solid;
+        width: 90%;
+        padding: 16px;
+        font-size: 16px !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+.footer {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 12px;
+}
