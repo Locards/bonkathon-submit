@@ -14,8 +14,8 @@
 ## 1. Login
 - Go to https://demo.bonny.so
 - Signup with a random email-adress (won't be verified) or use these credentials:
-    - Username: `bonkathon@bonny.so`
-    - Password: `bonkathonftw`
+    - Username: `londonhh@bonny.so`
+    - Password: `londonhh`
     - It may take some time, since the server needs to startup
 
 ## 2. Upload Receipt and gain Bonny Tokens
@@ -37,6 +37,6 @@ Hint: you need the Reclaim Protocol app and an Uber account
 Hint: Reclaim features dont't work with wallet login, yet
 - Open Phantom app and change your settings to Testnet mode, select Solana Devnet
 - Add some Sol to your account (e.g. solfaucet.com)
-- You may need to logout first, if you're automatically logged in with the bonkathon@bonny.so account
+- You may need to logout first, if you're automatically logged in with the londonhh@bonny.so account
 - Press on "Connect Wallet", select Phantom and follow the instructions
 - Now you can upload receipts and gain token
